@@ -100,8 +100,7 @@ body {
     background-color: rgb(12, 17, 20);
     display: flex;
     align-items: center;
-    justify-content: right;
-    gap: 20px;
+    justify-content: space-between;
     padding: 20px;
 }
 
@@ -137,4 +136,41 @@ body {
 .js-input::selection {
     background-color: yellow;
     color: black;
+}
+
+.result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#logo {
+    color: rgb(236, 232, 232);
+}
+
+@media (max-width: 600px) {
+    #logo {
+        color: rgb(236, 232, 232);
+        font-size: 22px;
+    }
+    .result {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+}
+
+@media (max-width: 400px) {
+    #logo {
+        color: rgb(236, 232, 232);
+        font-size: 19px;
+    }
+    .result {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+    }
 }

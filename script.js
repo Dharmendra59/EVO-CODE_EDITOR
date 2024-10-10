@@ -7,9 +7,10 @@ let output = document.querySelector("#output")
 let full = document.querySelector("#full")
 let copy = document.querySelectorAll(".copy")
 save.addEventListener("click", () => {
-    output.contentDocument.body.innerHTML = htmlInput.value
-    output.contentDocument.head.innerHTML = `<style>${cssInput.value}</style>`
-    output.contentWindow.eval(jsInput.value)
+    //     output.contentDocument.body.innerHTML = htmlInput.value
+    //     output.contentDocument.head.innerHTML = `<style>${cssInput.value}</style>`
+    //     output.contentWindow.eval(jsInput.value)
+    response();
 
 })
 full.addEventListener("click", () => {
@@ -33,3 +34,14 @@ copy.forEach((e) => {
     })
 
 })
+
+function response() {
+    output.contentDocument.body.innerHTML = htmlInput.value
+    output.contentDocument.head.innerHTML = `<style>${cssInput.value}</style>`
+    output.contentWindow.eval(jsInput.value)
+}
+// useEffect(() => {
+
+//     response();
+
+// }, []);
